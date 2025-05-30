@@ -65,7 +65,7 @@ class OrderControllerTest {
 
             doReturn(BigDecimal.valueOf(20.50)).when(orderService).findTotalOrdersByCustomerId(customerIdCaptor.capture());
 
-            var response = orderController.listOrders(customerId, page, pageSize);
+            orderController.listOrders(customerId, page, pageSize);
 
             assertEquals(2, customerIdCaptor.getAllValues().size());
             assertEquals(customerId, customerIdCaptor.getAllValues().get(0));
