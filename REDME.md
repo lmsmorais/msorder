@@ -1,15 +1,16 @@
-O projeto msorder
+# Project msorder
 
-Subir o container docker:
+### Docker step:
 docker compose up
 
-Acessar o rabbitMq:
+### RabbitMq access:
 http://localhost:15672
-usuario: guest
-senha: guest
+user: guest
+password: guest
 
-json esperado pelo consumer:
+### Expected consumer json:
 
+```json
 {
    "codigoPedido": 1001,
    "codigoCliente":1,
@@ -26,3 +27,4 @@ json esperado pelo consumer:
        }
    ]
 }
+```
